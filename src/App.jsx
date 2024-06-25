@@ -1,6 +1,7 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
 
+
 const tweetsArray = [
   {
     user: {
@@ -40,7 +41,13 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {/*
+      Pass the first object from the tweetsArray as a tweet prop to the Tweet component
+      <Tweet tweet = {tweetsArray[0]} /> */}
+      {tweetsArray.map(tweetObject => (
+        <Tweet tweet = {tweetObject} />
+        ))}  
+      
     </div>
   );
 }
